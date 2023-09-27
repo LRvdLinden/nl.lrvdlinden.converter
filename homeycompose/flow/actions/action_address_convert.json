@@ -1,0 +1,36 @@
+{
+  "id": "action_gps_convert",
+  "title": {
+    "en": "Convert GPS coordinate to a address",
+    "nl": "Zet GPS coördinaat om naar een adres"
+  },
+  "titleFormatted": {
+    "en": "GPS coordinate are [[latitude]] & [[longitude]] ",
+    "nl": "GPS coördinaat is [[latitude]] & [[longitude]] "
+  },
+  "highlight": true,
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=GPSconverter"
+    },
+    {
+      "name": "latitude",
+      "type": "text",
+      "title": {
+        "en": "latitude",
+        "nl": "breedtegraad"
+      }
+    },
+    {
+      "name": "longitude",
+      "type": "text",
+      "title": {
+        "en": "longitude",
+        "nl": "lengtegraad"
+      }
+    
+    }]
+          }
+        

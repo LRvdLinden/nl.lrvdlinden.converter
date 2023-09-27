@@ -1,0 +1,84 @@
+{
+  "id": "nl.lrvdlinden.converter",
+  "version": "1.0.4",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "platforms": [
+    "local"
+  ],
+  "brandColor": "#f83234",
+  "name": {
+    "en": "< converter >",
+    "nl": "< converter >"
+  },
+  "images": {
+    "xlarge": "/assets/images/xlarge.jpg",
+    "large": "/assets/images/large.jpg",
+    "small": "/assets/images/small.jpg"
+  },
+  "description": {
+    "en": "Convert GPS coordinates, IP addresses and more directly from your Homey",
+    "nl": "Zet GPS coördinaten, IP adressen en meer direct vanuit je Homey om"
+  },
+  "category": "tools",
+  "class": "cloud",
+  "tags": {
+    "en": [
+      "internet",
+      "google",
+      "maps",
+      "location",
+      "apple",
+      "navigation",
+      "address",
+      "IP",
+      "converter"
+    ],
+    "nl": [
+      "internet",
+      "google",
+      "maps",
+      "locatie",
+      "apple",
+      "navigatie",
+      "adres",
+      "IP",
+      "converter"
+    ]
+  },
+  "language": {
+    "en": "en",
+    "nl": "nl"
+  },
+  "permissions": [],
+  "author": {
+    "name": "Léon van der Linden",
+    "email": "homey@vdlinden.xyz"
+  },
+  "contributors": {
+    "translators": [
+      {
+        "name": "🇬🇧 Léon"
+      },
+      {
+        "name": "🇳🇱 Léon"
+      }
+    ]
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "lrvdlinden"
+      },
+      "bunq": {
+        "username": "lrvdlinden"
+      }
+    }
+  },
+  "bugs": {
+    "url": "https://community.homey.app/t/app-pro-converter-for-homey/89846"
+  },
+  "homepage": "https://homey.app/nl-nl/apps/author/5d4da77a2c836a50f6936070/page/0/",
+  "support": "https://community.homey.app/t/app-pro-converter-for-homey/89846",
+  "homeyCommunityTopicId": 89846
+}
