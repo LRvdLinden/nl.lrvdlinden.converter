@@ -1,0 +1,20 @@
+{
+  "name": "nl.lrvdlinden.converter",
+  "version": "1.0.0",
+  "description": "GPS coordinates to address converter.",
+  "author": "homey@vdlinden.xyz",
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lrvdlinden/nl.lrvdlinden.converter"
+  },
+  "main": "app.js",
+  "homey": ">=3.0.0",
+  "dependencies": {
+    "axios": "^1.5.0",
+    "node-fetch": "^3.3.2"
+  },
+  "scripts": {
+    "lint": "eslint --ext .js,.ts --ignore-path .gitignore ."
+  }
+}

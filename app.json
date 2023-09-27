@@ -1,0 +1,825 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "nl.lrvdlinden.converter",
+  "version": "1.0.4",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "platforms": [
+    "local"
+  ],
+  "brandColor": "#f83234",
+  "name": {
+    "en": "< converter >",
+    "nl": "< converter >"
+  },
+  "images": {
+    "xlarge": "/assets/images/xlarge.jpg",
+    "large": "/assets/images/large.jpg",
+    "small": "/assets/images/small.jpg"
+  },
+  "description": {
+    "en": "Convert GPS coordinates, IP addresses and more directly from your Homey",
+    "nl": "Zet GPS coördinaten, IP adressen en meer direct vanuit je Homey om"
+  },
+  "category": "tools",
+  "class": "cloud",
+  "tags": {
+    "en": [
+      "internet",
+      "google",
+      "maps",
+      "location",
+      "apple",
+      "navigation",
+      "address",
+      "IP",
+      "converter"
+    ],
+    "nl": [
+      "internet",
+      "google",
+      "maps",
+      "locatie",
+      "apple",
+      "navigatie",
+      "adres",
+      "IP",
+      "converter"
+    ]
+  },
+  "language": {
+    "en": "en",
+    "nl": "nl"
+  },
+  "permissions": [],
+  "author": {
+    "name": "Léon van der Linden",
+    "email": "homey@vdlinden.xyz"
+  },
+  "contributors": {
+    "translators": [
+      {
+        "name": "🇬🇧 Léon"
+      },
+      {
+        "name": "🇳🇱 Léon"
+      }
+    ]
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "lrvdlinden"
+      },
+      "bunq": {
+        "username": "lrvdlinden"
+      }
+    }
+  },
+  "bugs": {
+    "url": "https://community.homey.app/t/app-pro-converter-for-homey/89846"
+  },
+  "homepage": "https://homey.app/nl-nl/apps/author/5d4da77a2c836a50f6936070/page/0/",
+  "support": "https://community.homey.app/t/app-pro-converter-for-homey/89846",
+  "homeyCommunityTopicId": 89846,
+  "flow": {
+    "triggers": [
+      {
+        "id": "new_gps_convert",
+        "title": {
+          "en": "There is a new GPS coordinate converted",
+          "nl": "Er is een nieuwe GPS coördinaat omgezet"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=GPSconverter"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "house_number",
+            "type": "string",
+            "title": {
+              "en": "Hous number",
+              "nl": "Huisnummer"
+            }
+          },
+          {
+            "name": "road",
+            "type": "string",
+            "title": {
+              "en": "Street",
+              "nl": "Straat"
+            }
+          },
+          {
+            "name": "residential",
+            "type": "string",
+            "title": {
+              "en": "Residential",
+              "nl": "Residentieel"
+            }
+          },
+          {
+            "name": "suburb",
+            "type": "string",
+            "title": {
+              "en": "Suburb",
+              "nl": "Wijk"
+            }
+          },
+          {
+            "name": "city",
+            "type": "string",
+            "title": {
+              "en": "City",
+              "nl": "Woonplaats"
+            }
+          },
+          {
+            "name": "municipality",
+            "type": "string",
+            "title": {
+              "en": "Municipality",
+              "nl": "Gemeente"
+            }
+          },
+          {
+            "name": "state",
+            "type": "string",
+            "title": {
+              "en": "State",
+              "nl": "Provincie"
+            }
+          },
+          {
+            "name": "country",
+            "type": "string",
+            "title": {
+              "en": "country",
+              "nl": "Land"
+            }
+          },
+          {
+            "name": "postcode",
+            "type": "string",
+            "title": {
+              "en": "Postcode",
+              "nl": "Postcode"
+            }
+          },
+          {
+            "name": "country_code",
+            "type": "string",
+            "title": {
+              "en": "Country code",
+              "nl": "Land code"
+            }
+          }
+        ]
+      },
+      {
+        "id": "new_image_convert",
+        "title": {
+          "en": "There is a new image converted",
+          "nl": "Er is een nieuwe afbeelding omgezet"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=image"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "all_text",
+            "type": "string",
+            "title": {
+              "en": "All Text",
+              "nl": "Alle Tekst"
+            }
+          },
+          {
+            "name": "annotations",
+            "type": "string",
+            "title": {
+              "en": "Annotations",
+              "nl": "Aantekeningen"
+            }
+          }
+        ]
+      },
+      {
+        "id": "new_ip_convert",
+        "title": {
+          "en": "There is a new IP address converted",
+          "nl": "Er is een nieuwe IP address omgezet"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=IP"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "ip",
+            "type": "string",
+            "title": {
+              "en": "IP Address",
+              "nl": "IP Adres"
+            }
+          },
+          {
+            "name": "type",
+            "type": "string",
+            "title": {
+              "en": "Type",
+              "nl": "Type"
+            }
+          },
+          {
+            "name": "continent_code",
+            "type": "string",
+            "title": {
+              "en": "Continent Code",
+              "nl": "Continent Code"
+            }
+          },
+          {
+            "name": "continent_name",
+            "type": "string",
+            "title": {
+              "en": "Continent Name",
+              "nl": "Continent Naam"
+            }
+          },
+          {
+            "name": "country_code",
+            "type": "string",
+            "title": {
+              "en": "Country Code",
+              "nl": "Land Code"
+            }
+          },
+          {
+            "name": "country_name",
+            "type": "string",
+            "title": {
+              "en": "Country Name",
+              "nl": "Land Naam"
+            }
+          },
+          {
+            "name": "region_code",
+            "type": "string",
+            "title": {
+              "en": "Region Code",
+              "nl": "Regio Code"
+            }
+          },
+          {
+            "name": "region_name",
+            "type": "string",
+            "title": {
+              "en": "Region Name",
+              "nl": "Regio Naam"
+            }
+          },
+          {
+            "name": "city",
+            "type": "string",
+            "title": {
+              "en": "City",
+              "nl": "Woonplaats"
+            }
+          },
+          {
+            "name": "zip",
+            "type": "string",
+            "title": {
+              "en": "ZIP Code",
+              "nl": "Postcode"
+            }
+          },
+          {
+            "name": "latitude",
+            "type": "string",
+            "title": {
+              "en": "Latitude",
+              "nl": "Breedtegraad"
+            }
+          },
+          {
+            "name": "longitude",
+            "type": "string",
+            "title": {
+              "en": "Longitude",
+              "nl": "Lengtegraad"
+            }
+          },
+          {
+            "name": "capital",
+            "type": "string",
+            "title": {
+              "en": "Capital",
+              "nl": "Hoofdstad"
+            }
+          },
+          {
+            "name": "language_code",
+            "type": "string",
+            "title": {
+              "en": "Language Code",
+              "nl": "Taal Code"
+            }
+          },
+          {
+            "name": "language_name",
+            "type": "string",
+            "title": {
+              "en": "Language Name",
+              "nl": "Taal Naam"
+            }
+          },
+          {
+            "name": "language_native",
+            "type": "string",
+            "title": {
+              "en": "Native Language Name",
+              "nl": "Nederlandse Taal Naam"
+            }
+          }
+        ]
+      },
+      {
+        "id": "new_number_convert",
+        "title": {
+          "en": "There is a new phone number converted",
+          "nl": "Er is een nieuwe telefoonnummer omgezet"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=number"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "number",
+            "type": "string",
+            "title": {
+              "en": "Number",
+              "nl": "Nummer"
+            }
+          },
+          {
+            "name": "local_format",
+            "type": "string",
+            "title": {
+              "en": "Local Format",
+              "nl": "Lokaal Formaat"
+            }
+          },
+          {
+            "name": "international_format",
+            "type": "string",
+            "title": {
+              "en": "International Format",
+              "nl": "Internationaal Formaat"
+            }
+          },
+          {
+            "name": "country_prefix",
+            "type": "string",
+            "title": {
+              "en": "Country Prefix",
+              "nl": "Land Prefix"
+            }
+          },
+          {
+            "name": "country_code",
+            "type": "string",
+            "title": {
+              "en": "Country Code",
+              "nl": "Land Code"
+            }
+          },
+          {
+            "name": "country_name",
+            "type": "string",
+            "title": {
+              "en": "Country Name",
+              "nl": "Land Naam"
+            }
+          },
+          {
+            "name": "location",
+            "type": "string",
+            "title": {
+              "en": "Location",
+              "nl": "Locatie"
+            }
+          },
+          {
+            "name": "carrier",
+            "type": "string",
+            "title": {
+              "en": "Carrier",
+              "nl": "Drager"
+            }
+          },
+          {
+            "name": "line_type",
+            "type": "string",
+            "title": {
+              "en": "Line Type",
+              "nl": "Lijn Type"
+            }
+          }
+        ]
+      },
+      {
+        "id": "new_pdf_convert",
+        "title": {
+          "en": "There is a new website converted",
+          "nl": "Er is een nieuwe website omgezet"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=pdf"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "pdf_url",
+            "type": "string",
+            "title": {
+              "en": "PDF URL",
+              "nl": "PDF URL"
+            }
+          },
+          {
+            "name": "requested_url",
+            "type": "string",
+            "title": {
+              "en": "Requested URL",
+              "nl": "Opgevraagde URL"
+            }
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "action_gps_convert",
+        "title": {
+          "en": "Convert GPS coordinate to a address",
+          "nl": "Zet GPS coördinaat om naar een adres"
+        },
+        "titleFormatted": {
+          "en": "GPS coordinate are [[latitude]] & [[longitude]] ",
+          "nl": "GPS coördinaat is [[latitude]] & [[longitude]] "
+        },
+        "highlight": true,
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=GPSconverter"
+          },
+          {
+            "name": "latitude",
+            "type": "text",
+            "title": {
+              "en": "latitude",
+              "nl": "breedtegraad"
+            }
+          },
+          {
+            "name": "longitude",
+            "type": "text",
+            "title": {
+              "en": "longitude",
+              "nl": "lengtegraad"
+            }
+          }
+        ]
+      },
+      {
+        "id": "action_image_convert",
+        "title": {
+          "en": "Convert image to text",
+          "nl": "Zet afbeelding om naar tekst"
+        },
+        "titleFormatted": {
+          "en": "Image url is [[url]] and my apiKey is [[apikey]]",
+          "nl": "Afbeelding url is [[url]] en mijn apiKey is [[apikey]]"
+        },
+        "highlight": true,
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=image"
+          },
+          {
+            "name": "url",
+            "type": "text",
+            "title": {
+              "en": "Image url",
+              "nl": "Afbeelding url"
+            }
+          },
+          {
+            "name": "apikey",
+            "type": "text",
+            "title": {
+              "en": "ApiKey",
+              "nl": "ApiKey"
+            }
+          }
+        ]
+      },
+      {
+        "id": "action_ip_convert",
+        "title": {
+          "en": "Convert IP to a address",
+          "nl": "Zet IP om naar een adres"
+        },
+        "titleFormatted": {
+          "en": "IP address are [[IP]] and my access key is [[access_key]]",
+          "nl": "IP adres is [[IP]] en mijn access key is [[access_key]]"
+        },
+        "highlight": true,
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=IP"
+          },
+          {
+            "name": "IP",
+            "type": "text",
+            "title": {
+              "en": "IP address",
+              "nl": "IP adres"
+            }
+          },
+          {
+            "name": "access_key",
+            "type": "text",
+            "title": {
+              "en": "Access key",
+              "nl": "Toegangssleutels"
+            }
+          }
+        ]
+      },
+      {
+        "id": "action_number_convert",
+        "title": {
+          "en": "Convert phone number to location",
+          "nl": "Zet telefoonnummer om naar locatie"
+        },
+        "titleFormatted": {
+          "en": "Phone number is [[number]] and my apiKey is [[apikey]]",
+          "nl": "Telefoonnummer is [[number]] en mijn apiKey is [[apikey]]"
+        },
+        "highlight": true,
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=number"
+          },
+          {
+            "name": "number",
+            "type": "text",
+            "title": {
+              "en": "Phone number",
+              "nl": "Telefoonnummer"
+            }
+          },
+          {
+            "name": "apikey",
+            "type": "text",
+            "title": {
+              "en": "ApiKey",
+              "nl": "ApiKey"
+            }
+          }
+        ]
+      },
+      {
+        "id": "action_pdf_convert",
+        "title": {
+          "en": "Convert website to pdf",
+          "nl": "Zet website om naar pdf"
+        },
+        "titleFormatted": {
+          "en": "Website url is [[url]] and my apiKey is [[apikey]]",
+          "nl": "Website url is [[url]] en mijn apiKey is [[apikey]]"
+        },
+        "highlight": true,
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=pdf"
+          },
+          {
+            "name": "url",
+            "type": "text",
+            "title": {
+              "en": "Website url",
+              "nl": "Website url"
+            }
+          },
+          {
+            "name": "apikey",
+            "type": "text",
+            "title": {
+              "en": "ApiKey",
+              "nl": "ApiKey"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "name": {
+        "en": "GPS to address",
+        "nl": "GPS naar adres"
+      },
+      "class": "other",
+      "capabilities": [],
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "cloud"
+      ],
+      "images": {
+        "small": "/drivers/GPSconverter/assets/images/small.jpg",
+        "large": "/drivers/GPSconverter/assets/images/large.jpg"
+      },
+      "energy": {},
+      "id": "GPSconverter"
+    },
+    {
+      "name": {
+        "en": "IP to location",
+        "nl": "IP naar adres"
+      },
+      "class": "other",
+      "capabilities": [],
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "cloud"
+      ],
+      "images": {
+        "small": "/drivers/IP/assets/images/small.jpg",
+        "large": "/drivers/IP/assets/images/large.jpg"
+      },
+      "energy": {},
+      "id": "IP"
+    },
+    {
+      "name": {
+        "en": "Image to text",
+        "nl": "Afbeelding naar text"
+      },
+      "class": "other",
+      "capabilities": [],
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "cloud"
+      ],
+      "images": {
+        "small": "/drivers/image/assets/images/small.jpg",
+        "large": "/drivers/image/assets/images/large.jpg"
+      },
+      "energy": {},
+      "id": "image"
+    },
+    {
+      "name": {
+        "en": "Number to address",
+        "nl": "Nummer naar adres"
+      },
+      "class": "other",
+      "capabilities": [],
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "cloud"
+      ],
+      "images": {
+        "small": "/drivers/number/assets/images/small.jpg",
+        "large": "/drivers/number/assets/images/large.jpg"
+      },
+      "energy": {},
+      "id": "number"
+    },
+    {
+      "name": {
+        "en": "Website to pdf",
+        "nl": "Website naar pdf"
+      },
+      "class": "other",
+      "capabilities": [],
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "cloud"
+      ],
+      "images": {
+        "small": "/drivers/pdf/assets/images/small.jpg",
+        "large": "/drivers/pdf/assets/images/large.jpg"
+      },
+      "energy": {},
+      "id": "pdf"
+    }
+  ]
+}
