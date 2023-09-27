@@ -40,6 +40,7 @@ class GPSconverterDevice extends Device {
   processApiResponse(apiResponse) {
     // Ik ga ervan uit dat 'apiResponse' een object is met een 'address' eigenschap. Pas dit aan op basis van de werkelijke responsstructuur.
     const address = apiResponse.address;
+    console.log(address);
     
     // Creëer het tokens object met de verkregen waarden uit de 'address'
     const tokens = {
@@ -47,7 +48,7 @@ class GPSconverterDevice extends Device {
       road: address.road ?? '',
       residential: address.residential ?? '',
       suburb: address.suburb ?? '',
-      city: address.city ?? '',
+      city: address.city ?? address.town ?? '',
       municipality: address.municipality ?? '',
       state: address.state ?? '',
       country: address.country ?? '',
