@@ -1,0 +1,36 @@
+{
+  "id": "action_number_convert",
+  "title": {
+    "en": "Convert phone number to location",
+    "nl": "Zet telefoonnummer om naar locatie"
+  },
+  "titleFormatted": {
+    "en": "Phone number is [[number]] and my apiKey is [[apikey]]",
+    "nl": "Telefoonnummer is [[number]] en mijn apiKey is [[apikey]]"
+  },
+  "highlight": true,
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=number"
+    },
+    {
+      "name": "number",
+      "type": "text",
+      "title": {
+        "en": "Phone number",
+        "nl": "Telefoonnummer"
+      }
+    },
+    {
+      "name": "apikey",
+      "type": "text",
+      "title": {
+        "en": "ApiKey",
+        "nl": "ApiKey"
+      }
+    
+    }]
+          }
+        

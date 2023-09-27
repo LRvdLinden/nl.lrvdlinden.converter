@@ -1,0 +1,96 @@
+{
+    "id": "new_gps_convert",
+    "title": {
+      "en": "There is a new GPS coordinate converted",
+      "nl": "Er is een nieuwe GPS coördinaat omgezet"
+    },
+    "args": [
+      {
+        "name": "device",
+        "type": "device",
+        "filter": "driver_id=GPSconverter"
+      }
+    ],
+    "tokens": [
+    {
+      "name": "house_number",
+      "type": "string",
+      "title": {
+        "en": "Hous number",
+        "nl": "Huisnummer"
+      }
+    },
+    {
+      "name": "road",
+      "type": "string",
+      "title": {
+        "en": "Street",
+        "nl": "Straat"
+      }
+    },
+    {
+      "name": "residential",
+      "type": "string",
+      "title": {
+        "en": "Residential",
+        "nl": "Residentieel"
+      }
+    },
+    {
+      "name": "suburb",
+      "type": "string",
+      "title": {
+        "en": "Suburb",
+        "nl": "Wijk"
+      }
+    },
+    {
+      "name": "city",
+      "type": "string",
+      "title": {
+        "en": "City",
+        "nl": "Woonplaats"
+      }
+      },
+      {
+        "name": "municipality",
+        "type": "string",
+        "title": {
+          "en": "Municipality",
+          "nl": "Gemeente"
+        }
+      },
+      {
+        "name": "state",
+        "type": "string",
+        "title": {
+          "en": "State",
+          "nl": "Provincie"
+        }
+      },
+      {
+        "name": "country",
+        "type": "string",
+        "title": {
+          "en": "country",
+          "nl": "Land"
+        }
+      },
+      {
+        "name": "postcode",
+        "type": "string",
+        "title": {
+          "en": "Postcode",
+          "nl": "Postcode"
+        }
+      },
+      {
+        "name": "country_code",
+        "type": "string",
+        "title": {
+          "en": "Country code",
+          "nl": "Land code"
+        }
+    }
+  ]
+}
