@@ -43,16 +43,16 @@ class GPSconverterDevice extends Device {
     
     // Creëer het tokens object met de verkregen waarden uit de 'address'
     const tokens = {
-      house_number: address.house_number,
-      road: address.road,
-      residential: address.residential,
-      suburb: address.suburb,
-      city: address.city,
-      municipality: address.municipality,
-      state: address.state,
-      country: address.country,
-      postcode: address.postcode,
-      country_code: address.country_code,
+      house_number: address.house_number ?? '',
+      road: address.road ?? '',
+      residential: address.residential ?? '',
+      suburb: address.suburb ?? '',
+      city: address.city ?? '',
+      municipality: address.municipality ?? '',
+      state: address.state ?? '',
+      country: address.country ?? '',
+      postcode: address.postcode ?? '',
+      country_code: address.country_code ?? '',
     };
     
     // Het activeren van de trigger met de samengestelde tokens
