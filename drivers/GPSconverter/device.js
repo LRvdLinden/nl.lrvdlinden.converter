@@ -40,19 +40,20 @@ class GPSconverterDevice extends Device {
   processApiResponse(apiResponse) {
     // Ik ga ervan uit dat 'apiResponse' een object is met een 'address' eigenschap. Pas dit aan op basis van de werkelijke responsstructuur.
     const address = apiResponse.address;
+    console.log(address);
     
     // Creëer het tokens object met de verkregen waarden uit de 'address'
     const tokens = {
-      house_number: address.house_number,
-      road: address.road,
-      residential: address.residential,
-      suburb: address.suburb,
-      city: address.city,
-      municipality: address.municipality,
-      state: address.state,
-      country: address.country,
-      postcode: address.postcode,
-      country_code: address.country_code,
+      house_number: address.house_number ?? '',
+      road: address.road ?? '',
+      residential: address.residential ?? '',
+      suburb: address.suburb ?? '',
+      city: address.city ?? address.town ?? '',
+      municipality: address.municipality ?? '',
+      state: address.state ?? '',
+      country: address.country ?? '',
+      postcode: address.postcode ?? '',
+      country_code: address.country_code ?? '',
     };
     
     // Het activeren van de trigger met de samengestelde tokens
